@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test2</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      th,
+      td {
+        text-align: left;
+        padding: 8px;
+      }
+
+      tr:nth-child(even) {
+          background-color: #f2f2f2;
+      }
+
+      th {
+        background-color: #04aa6d;
+        color: white;
+      }
+      .cart {
+        display: flex;
+        height: 400px;
+      }
+      button {
+  background-color: #c2fbd7;
+  border-radius: 200px;
+  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+  color: rgb(80, 70, 0);
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  padding-left: 10px;
+  padding-right: 5px;
+}
+
+button:hover {
+  box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
+  
+}
+      img {
+        height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="cart">
+      <div>
+        <img src="pic1.jpg" alt="" />
+        <br>
+        <button onclick="myFunction1(); qu1()">Add to cart</button>
+        <button onclick="myFunction1p(); qu1p()">Remove</button>
+      </div>
+      <div>
+        <img src="pic2.jpg" alt="" />
+<br>
+        <button onclick="myFunction2(); qu2()">Add to cart</button>
+        <button onclick="myFunction2p(); qu2p()">Remove</button>
+      </div>
+    </section>
+
+    <br />
+    <br />
+    <br />
+    <div>
+      <table>
+        <tr>
+          <th>Price for Item 1</th>
+          <th>Price for Item 2</th>
+        </tr>
+        <tr>
+          <td>
+            <p id="click1"></p>
+            <br />
+          </td>
+          <td>
+            <p id="click2"></p>
+            <br />
+          </td>
+        </tr>
+      </table>
+      <br />
+      <br />
+      <table>
+        <tr>
+          <th>Quantity of Item 1</th>
+          <th>Quantity of Item 2</th>
+        </tr>
+        <tr>
+          <td><p id="q1"></p></td>
+          <td><p id="q2"></p></td>
+        </tr>
+      </table>
+    </div>
+
+    <script>
+      var c1 = 0
+      var c2 = 0
+      var q1 = 0
+      var q2 = 0
+
+      function myFunction1() {
+        c1 += 100
+        document.getElementById('click1').innerHTML = c1
+      }
+      function myFunction1p() {
+        if (c1 == 0) {
+          return 0
+        }
+        c1 -= 100
+        document.getElementById('click1').innerHTML = c1
+      }
+      function qu1() {
+        q1++
+        document.getElementById('q1').innerHTML = q1
+      }
+
+      function qu1p() {
+        if (q1 == 0) {
+          return 0
+        }
+        q1--
+        document.getElementById('q1').innerHTML = q1
+      }
+
+      function myFunction2() {
+        c2 += 100
+        document.getElementById('click2').innerHTML = c2
+      }
+      function myFunction2p() {
+        if (c2 == 0) {
+          return 0
+        }
+        c2 -= 100
+        document.getElementById('click2').innerHTML = c2
+      }
+      function qu2() {
+        q2++
+        document.getElementById('q2').innerHTML = q2
+      }
+      function qu2p() {
+        if (q2 == 0) {
+          return 0
+        }
+        q2--
+        document.getElementById('q2').innerHTML = q2
+      }
+    </script>
+  </body>
+</html>
