@@ -6,90 +6,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Add to Cart</title>
     <style>
-      table {
-        border-collapse: collapse;
-        width: 100%;
-      }
+      /* ---------------------------------------------------------------------------------------------- */
 
-      th,
-      td {
-        text-align: left;
-        padding: 8px;
-      }
-
-      tr:nth-child(even) {
-        background-color: #f2f2f2;
-      }
-
-      th {
-        background-color: #04aa6d;
-        color: white;
-      }
-      .cart {
-        display: flex;
-        height: 400px;
-      }
-      button {
-        background-color: #c2fbd7;
-        border-radius: 200px;
-        box-shadow: rgba(44, 187, 99, 0.2) 0 -25px 18px -14px inset,
-          rgba(44, 187, 99, 0.15) 0 1px 2px, rgba(44, 187, 99, 0.15) 0 2px 4px,
-          rgba(44, 187, 99, 0.15) 0 4px 8px, rgba(44, 187, 99, 0.15) 0 8px 16px,
-          rgba(44, 187, 99, 0.15) 0 16px 32px;
-        color: rgb(80, 70, 0);
-        cursor: pointer;
-        display: inline-block;
-        font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto,
-          sans-serif;
-        text-align: center;
-        text-decoration: none;
-        transition: all 250ms;
-        border: 0;
-        font-size: 16px;
-        user-select: none;
-        -webkit-user-select: none;
-        touch-action: manipulation;
-        padding-left: 10px;
-        padding-right: 5px;
-      }
-
-
-      button:hover {
-        box-shadow: rgba(44, 187, 99, 0.35) 0 -25px 18px -14px inset,
-          rgba(44, 187, 99, 0.25) 0 1px 2px, rgba(44, 187, 99, 0.25) 0 2px 4px,
-          rgba(44, 187, 99, 0.25) 0 4px 8px, rgba(44, 187, 99, 0.25) 0 8px 16px,
-          rgba(44, 187, 99, 0.25) 0 16px 32px;
-        transform: scale(1.05) rotate(-1deg);
-      }
-      img {
-        height: 200px;
-      }
-      .con{
-        color: white;
-        background-color: rgb(2, 138, 4);
-        align-items: center;
-        
-      }
-      .button-container-div {
-            text-align: center;
-      }
-  
+      /* ------------ */
     </style>
+    <link rel="stylesheet" href="Add_to_cart.css">
   </head>
   <body>
-    <section class="cart">
-      <div>
-        <img src="pic1.jpg" alt="" />
-        <br />
-        <button onclick="myFunction1(); qu1()">Add to cart</button>
-      </div>
-      <div>
-        <img src="pic2.jpg" alt="" />
-        <br />
-        <button onclick="myFunction2(); qu2()">Add to cart</button>
-      </div>
-    </section>
+    <div class="navbar">
+      <a href="Add_to_cart.html" class="active">Home</a>
+      <a href="#">Link</a>
+      <a href="#">Link</a>
+      <a href="reg.html" class="right">Sign Up</a>
+      <a href="reg.html" class="right">Sign Up</a>
 
+    </div>
+    <br />
+    <br />
+    <main class="full">
+      <div class="items">
+        <div>
+          <img src="pic1.jpg" alt="" />
+          <br />
+          <button onclick="myFunction1(); qu1()">Add to cart</button>
+        </div>
+        <div>
+          <img src="pic2.jpg" alt="" />
+          <br />
+          <button onclick="myFunction2(); qu2()">Add to cart</button>
+        </div>
+        <div>
+          <img src="pic1.jpg" alt="" />
+          <br />
+          <button onclick="myFunction1(); qu1()">Add to cart</button>
+        </div>
+        <div>
+          <img src="pic2.jpg" alt="" />
+          <br />
+          <button onclick="myFunction2(); qu2()">Add to cart</button>
+        </div>
+        <div>
+          <img src="pic2.jpg" alt="" />
+          <br />
+          <button onclick="myFunction2(); qu2()">Add to cart</button>
+        </div>
+      </div>
+      <div class="report">
+        <table>
+          <tr>
+            <th><p id="dot"></p></th>
+            <th><p id="rep_des"></p></th>
+          </tr>
+          <tr>
+            <td><p id="uname"></p></td>
+            <td><p id="uname_value"></p></td>
+          </tr>
+          <tr>
+            <td><p id="rrtq"></p></td>
+            <td><p id="rtq"></p></td>
+          </tr>
+          <tr>
+            <td><p id="rrtp"></p></td>
+            <td><p id="rtp"></p></td>
+          </tr>
+        </table>
+      </div>
+    </main>
+
+    <br />
+    <br />
     <br />
     <br />
     <br />
@@ -138,31 +123,14 @@
           <th><h3 id="tp"></h3></th>
         </tr>
       </table>
-      <br><br><br>
+      <br />
+      <br />
+      <br />
       <div class="button-container-div">
         <button class="button con" onclick="confirm()">Tap to Confirm</button>
       </div>
-      <br><br>
-      <div class="report">
-        <table>
-          <tr>
-            <th><p id="dot"></p></th>
-            <th><p id="rep_des"></p></th>
-          </tr>
-          <tr>
-            <td><p id="uname"></p></td>
-            <td><p id="uname_value"></p></td>
-          </tr>
-          <tr>
-            <td><p id="rrtq"></p></td>
-            <td><P id="rtq"></P></td>
-          </tr>
-          <tr>
-            <td><p id="rrtp"></p></td>
-            <td><p id="rtp"></p></td>
-          </tr>
-        </table>
-      </div>
+      <br />
+      <br />
     </div>
     <script src="Add_to_cart.js"></script>
   </body>
