@@ -1,22 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ForLoop</title>
-
-</head>
-<body>
+  </head>
+  <body>
     <p id="demo"></p>
+    <br />
+    <br />
+    <p id="m1"></p>
+    <br />
+    <br />
+    <p id="m2"></p>
     <script>
-        const cars = ["BMW","Volvo", "Ford", "Fiat", "Audi"]
+      const cars = ['BMW', 'Volvo', 'Ford', 'Fiat', 'Audi']
 
-        let text="";
-        for(let i=0; i<cars.length; i++){
-            text+=cars[i]+ "<br>";
+      let text = ''
+      for (let i = 0; i < cars.length; i++) {
+        text += cars[i] + '<br>'
+      }
+      document.getElementById('demo').innerHTML = text
+
+      let number = 1
+      let t = ''
+      while (number <= 5) {
+        let ok = 0
+
+        t += '<br><br>Multiple Table of ' + number
+        document.getElementById('m1').innerHTML = t
+
+        for (let i = 1; i <= 10; i++) {
+          ok = number * i
+
+          t += '<br>' + number + ' * ' + i + ' = ' + ok
+          if (number == 5 && i == 5) {
+            break
+          }
         }
-        document.getElementById("demo").innerHTML=text;
+        document.getElementById('m1').innerHTML = t
+
+        number++
+      }
+      let k = ''
+
+      for (let m = 1; m < 3; m++) {
+        for (let n = 1; n < 3; n++) {
+          for (let l = 1; l < 3; l++) {
+            k += m + '   ' + n + '    ' + l + '<br>'
+          }
+        }
+      }
+      document.getElementById('m2').innerHTML = k
+      
     </script>
-</body>
+  </body>
 </html>
